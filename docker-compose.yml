@@ -11,8 +11,6 @@ services:
     restart: always
     ports:
       - 3000
-    network:
-      - dokploy-network
       
     labels:
     - traefik.enable=true
@@ -23,6 +21,3 @@ services:
   # Add more containers below (nginx, postgres, etc.)
 # Define a network, which allows containers to communicate
 # with each other, by using their container name as a hostname
-network:
-  dokploy-network:
-    external: true
